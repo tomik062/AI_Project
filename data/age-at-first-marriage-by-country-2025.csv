@@ -1,0 +1,192 @@
+"flagCode","country","AgeAtFirstMarriage_AvgAgeBothGenders_years","AgeAtFirstMarriage_AvgAgeMen_years","AgeAtFirstMarriage_AvgAgeWomen_years"
+"CO","Colombia",18.1,20.2,22.3
+"TZ","Tanzania",19,22.3,23.8
+"LR","Liberia",19,21,23
+"ML","Mali",19.1,22.6,26
+"TD","Chad",19.1,22.2,25.3
+"ST","Sao Tome and Principe",19.1,21.6,24.1
+"NG","Nigeria",19.2,22,24.8
+"NE","Niger",19.2,21,22.8
+"MR","Mauritania",19.2,23.2,27.1
+"CI","Ivory Coast",19.5,23.1,26.7
+"CM","Cameroon",19.6,22.8,26
+"GN","Guinea",19.8,23.9,28
+"BF","Burkina Faso",19.9,23.1,26.3
+"ZW","Zimbabwe",19.9,22.3,24.6
+"BJ","Benin",19.9,22.2,24.4
+"NP","Nepal",20.1,21.9,23.6
+"KI","Kiribati",20.1,21.9,23.6
+"UG","Uganda",20.2,22.3,24.4
+"CF","Central African Republic",20.3,22,23.7
+"SB","Solomon Islands",20.3,23,25.6
+"SS","South Sudan",20.4,24,27.6
+"KM","Comoros",20.4,23,25.6
+"LA","Laos",20.5,21.9,23.3
+"GQ","Equatorial Guinea",20.5,23.3,26.1
+"SO","Somalia",20.6,23.6,26.5
+"RW","Rwanda",20.6,22.7,24.7
+"NI","Nicaragua",20.6,22.5,24.4
+"ER","Eritrea",20.6,24.9,29.1
+"TL","Timor-Leste",20.6,22.8,25
+"ZM","Zambia",20.7,23.2,25.7
+"VU","Vanuatu",20.8,22.6,24.4
+"MW","Malawi",20.9,23.1,25.3
+"LS","Lesotho",20.9,23.2,25.5
+"GW","Guinea-Bissau",20.9,24.5,28.1
+"ID","Indonesia",21,23.2,25.4
+"CD","DR Congo",21,23.6,26.2
+"KH","Cambodia",21,22.2,23.4
+"MM","Myanmar",21.1,22.9,24.6
+"HN","Honduras",21.2,22.7,24.1
+"VC","Saint Vincent and the Grenadines",21.2,24.5,27.8
+"GT","Guatemala",21.3,22.5,23.6
+"BI","Burundi",21.3,23,24.6
+"CU","Cuba",21.3,23.4,25.4
+"PG","Papua New Guinea",21.4,23.2,25
+"GA","Gabon",21.4,23.5,25.5
+"GY","Guyana",21.5,23.5,25.4
+"PA","Panama",21.6,23.5,25.3
+"MV","Maldives",21.6,22.9,24.1
+"NR","Nauru",21.6,22.4,23.2
+"GH","Ghana",21.7,23.7,25.7
+"SD","Sudan",21.9,25.4,28.9
+"CG","Republic of the Congo",22,24.1,26.1
+"TJ","Tajikistan",22.1,24.2,26.2
+"ET","Ethiopia",22.3,24.6,26.8
+"TG","Togo",22.3,25,27.6
+"AF","Afghanistan",22.4,24,25.6
+"UZ","Uzbekistan",22.4,24.7,26.6
+"SV","El Salvador",22.5,24,25.5
+"VE","Venezuela",22.7,24.4,26
+"PY","Paraguay",22.7,24.28,26.8
+"GM","Gambia",22.7,26.7,30.7
+"MZ","Mozambique",22.8,25.2,27.6
+"MG","Madagascar",22.8,24.2,25.5
+"BT","Bhutan",22.8,24.1,25.4
+"YE","Yemen",23,24.6,26.1
+"TM","Turkmenistan",23.3,24,24.6
+"TV","Tuvalu",23.3,25.8,28.2
+"AO","Angola",23.4,25.1,26.7
+"LK","Sri Lanka",23.4,25.3,27.2
+"PE","Peru",23.5,25.5,27.5
+"KG","Kyrgyzstan",23.6,25.4,27.2
+"TO","Tonga",23.6,24.3,25
+"SN","Senegal",23.8,27.6,31.4
+"IR","Iran",24,26,28
+"AZ","Azerbaijan",24,26.1,28.1
+"BO","Bolivia",24.1,25.4,26.6
+"BD","Bangladesh",24.8,26,27.2
+"HT","Haiti",24.9,26.8,28.7
+"EG","Egypt",25,28,31
+"KZ","Kazakhstan",25,26.3,27.6
+"AG","Antigua and Barbuda",25,27,29
+"VN","Vietnam",25.1,27.2,29.3
+"EC","Ecuador",25.1,26.7,28.3
+"BN","Brunei",25.1,26.2,27.3
+"IQ","Iraq",25.3,26.8,28.2
+"AE","United Arab Emirates",25.3,26.1,26.8
+"PH","Philippines",25.4,26.8,28.2
+"KP","North Korea",25.5,27.3,29
+"CN","China",25.6,27.2,28.8
+"PK","Pakistan",25.6,27,28.4
+"KE","Kenya",25.6,27.6,29.6
+"MH","Marshall Islands",25.6,26.4,27.1
+"MA","Morocco",25.7,28.5,31.3
+"FJ","Fiji",25.7,27.5,29.3
+"SA","Saudi Arabia",25.9,27.6,29.3
+"RU","Russia",26,27.6,29.2
+"MN","Mongolia",26,27.5,29
+"MD","Moldova",26,27.5,28.9
+"BY","Belarus",26.1,27.2,28.3
+"WS","Samoa",26.1,28.4,30.7
+"PS","Palestine",26.2,28.8,31.4
+"SY","Syria",26.3,29.1,31.8
+"BW","Botswana",26.4,28.7,30.9
+"SZ","Eswatini",26.5,28.5,30.5
+"JO","Jordan",26.6,29,31.3
+"BA","Bosnia and Herzegovina",26.8,28.2,29.5
+"MK","North Macedonia",26.9,28.3,29.6
+"TR","Turkey",27,28,29
+"BS","Bahamas",27,28.8,30.6
+"AM","Armenia",27.1,28.8,30.5
+"IN","India",27.2,28.6,30
+"DJ","Djibouti",27.4,29.4,31.3
+"TH","Thailand",27.6,29.2,30.8
+"AL","Albania",27.8,29.4,30.9
+"ME","Montenegro",28,29.6,31.1
+"TN","Tunisia",28.2,30.6,32.9
+"RO","Romania",28.3,30,31.6
+"LT","Lithuania",28.3,29.5,30.7
+"MT","Malta",28.5,29.5,30.5
+"RS","Serbia",28.6,30,31.4
+"BZ","Belize",28.6,29.4,30.1
+"KW","Kuwait",28.7,29.3,29.9
+"OM","Oman",28.9,30.5,32.1
+"HR","Croatia",28.9,30.2,31.5
+"GB","United Kingdom",29,30,31
+"BG","Bulgaria",29.1,30.6,32
+"UA","Ukraine",29.2,30.2,31.2
+"IL","Israel",29.2,30.4,31.6
+"NA","Namibia",29.2,30.5,31.7
+"BH","Bahrain",29.2,31.4,33.6
+"TT","Trinidad and Tobago",29.2,30.5,31.8
+"SR","Suriname",29.3,31.1,32.8
+"PL","Poland",29.4,30.8,32.2
+"MY","Malaysia",29.4,30.2,31
+"SK","Slovakia",29.4,30.7,31.9
+"GE","Georgia",29.4,30.7,31.9
+"QA","Qatar",29.4,30.4,31.3
+"SG","Singapore",29.5,29.8,30.1
+"CY","Cyprus",29.6,30.2,30.7
+"PW","Palau",29.6,30.8,31.9
+"JP","Japan",29.7,30.4,31.1
+"CZ","Czech Republic",29.8,31,32.2
+"BE","Belgium",30,31.2,32.3
+"LY","Libya",30,31,32
+"GR","Greece",30.1,31.5,32.9
+"HU","Hungary",30.1,31.5,32.8
+"CA","Canada",30.4,30.6,30.8
+"CH","Switzerland",30.4,31.6,32.8
+"LB","Lebanon",30.4,32.4,34.4
+"NZ","New Zealand",30.4,31,31.6
+"EE","Estonia",30.4,31.4,32.3
+"MC","Monaco",30.4,31.9,33.4
+"MX","Mexico",30.6,32,33.4
+"HK","Hong Kong",30.6,31.4,32.2
+"LV","Latvia",30.6,31.7,32.7
+"TW","Taiwan",30.7,31.7,32.6
+"SI","Slovenia",30.7,31.8,32.8
+"SM","San Marino",30.7,32.1,33.5
+"US","United States",30.8,31.4,32
+"DZ","Algeria",30.8,32,33.2
+"AU","Australia",30.8,32,33.2
+"AT","Austria",30.8,32,33.2
+"ZA","South Africa",31,33,35
+"CR","Costa Rica",31,32.5,34
+"SC","Seychelles",31.1,33.2,35.3
+"LI","Liechtenstein",31.2,32.6,33.9
+"KN","Saint Kitts and Nevis",31.3,31.7,32.1
+"LU","Luxembourg",31.8,33.1,34.3
+"CV","Cape Verde",32,33.6,35.2
+"GD","Grenada",32,33.6,35.2
+"PT","Portugal",32.4,33.2,33.9
+"MU","Mauritius",32.4,34.4,36.4
+"IS","Iceland",32.7,33.7,34.6
+"FR","France",32.8,33.6,34.4
+"BB","Barbados",32.9,34.1,35.3
+"FI","Finland",33.2,34.2,35.2
+"DK","Denmark",33.4,34.8,36.2
+"IT","Italy",33.6,34.4,35.2
+"JM","Jamaica",33.8,34.6,35.4
+"SE","Sweden",33.9,35.1,36.3
+"DE","Germany",34.4,35,35.6
+"UY","Uruguay",34.8,36,37.2
+"LC","Saint Lucia",34.9,35.5,36.1
+"IE","Ireland",35,36.4,37.8
+"BR","Brazil",35.6,36.8,38
+"AR","Argentina",36.8,37.8,38.8
+"NO","Norway",36.8,37.6,38.4
+"KR","South Korea",37,38,39
+"NL","Netherlands",37.6,38.4,39.2
+"CL","Chile",37.8,38.6,39.4
+"ES","Spain",38.8,39.8,40.8
