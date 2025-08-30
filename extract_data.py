@@ -11,6 +11,8 @@ fetch from github
 
 import requests
 import os
+import pandas as pd
+import io
 
 repo_owner = 'tomik062'
 repo_name = 'AI_Project'
@@ -36,8 +38,6 @@ for item in files_in_directory:
 
         print(f"Downloaded {item['name']} to {file_name}")
 
-import pandas as pd
-import io
 def extract_WorldBank():
     df_list=[]
     df_list.append(extract_WorldBank_file('data/healthcare-expenditure-per-capita-ppp.csv'))
@@ -58,8 +58,6 @@ def extract_WorldBank_file(file):
     df = pd.read_csv(file, delimiter=',', engine='python', skiprows=header_row_index)
     df = df.drop(columns=['Indicator Name', 'Indicator Code', '2024', 'Unnamed: 69'],errors='ignore')
     return df
-
-import pandas as pd
 
 def extract_OurWorldInData():
     df_list=[]
@@ -134,8 +132,6 @@ def extract_OurWorldInData_file(file_name):
 
     return df_wide
 
-import pandas as pd
-
 def extract_PewReaserch():
     df_list = []
     file_path = 'data/Religious-Composition-percentages.csv'
@@ -181,11 +177,6 @@ def extract_PewReaserch():
 
     df['Country'] = df['Country'].replace(country_name_mapping)
 
-    # Reshape the region data to have years as columns
-    df_region = df.pivot_table(index=['Country', 'Countrycode'], columns='Year', values='Region', aggfunc='first').reset_index()
-    df_region = df_region.rename(columns={'Country': 'Country Name', 'Countrycode': 'Country Code'})
-    df_list.append(df_region)
-
     # Identify religion columns (between 'Population' and 'Level')
     columns = df.columns.tolist()
     try:
@@ -194,7 +185,10 @@ def extract_PewReaserch():
         religion_columns = columns[population_index + 1:level_index]
     except ValueError:
         print("Error: 'Population' or 'Level' column not found.")
-        return df_list # Return with just the region dataframe if columns are missing
+        # Return with just the region dataframe if columns are missing
+        df_region = df.pivot_table(index=['Country', 'Countrycode'], columns='Year', values='Region', aggfunc='first').reset_index()
+        df_region = df_region.rename(columns={'Country': 'Country Name', 'Countrycode': 'Country Code'})
+        return [df_region]
 
 
     # Create a dataframe for each religion
@@ -213,9 +207,46 @@ def extract_PewReaserch():
 
         df_list.append(df_religion_filtered)
 
+    # Generate one-hot encoded dataframes for each region based
+    # on region (in 2010, same regions as in 2020)
+    unique_regions = df['Region'].unique()
+    all_years = range(1900, 2025)
+    df_2010 = df[df['Year'] == 2010][['Country', 'Region', 'Countrycode']].copy()
+    country_region_2010 = df_2010.set_index('Country')['Region'].to_dict()
+    country_code_map = df_2010.set_index('Country')['Countrycode'].to_dict()
+
+    # List of regions in the order of appending
+    regions_list = [
+        'Asia-Pacific','Europe','Latin America-Caribbean',
+        'Middle East-North Africa','North America','Sub-Saharan Africa'
+        ] # Add all unique regions here in the desired order
+
+    for region in regions_list:
+        # Create a new dataframe with all countries and years
+        all_countries = df[['Country', 'Countrycode']].drop_duplicates()
+        index = pd.MultiIndex.from_product([all_countries['Country'], all_years], names=['Country', 'Year'])
+        one_hot_df = pd.DataFrame(index=index).reset_index()
+        one_hot_df = one_hot_df.merge(all_countries, on='Country', how='left')
+        one_hot_df[region] = 0
+        # Set 1 for countries whose region in 2010 matches the current region
+        for country in all_countries['Country']:
+            if country in country_region_2010 and country_region_2010[country] == region:
+                one_hot_df.loc[one_hot_df['Country'] == country, region] = 1
+
+        # Pivot to get years as columns
+        one_hot_pivot = one_hot_df.pivot_table(index=['Country', 'Countrycode'], columns='Year', values=region).reset_index()
+        one_hot_pivot = one_hot_pivot.rename(columns={'Country': 'Country Name', 'Countrycode': 'Country Code'})
+
+        # Ensure all years from 1900 to 2024 are present as columns, filled with 0 if not in the original data
+        for year in all_years:
+             if year not in one_hot_pivot.columns:
+                one_hot_pivot[year] = 0
+        # Sort columns to ensure correct order
+        one_hot_pivot = one_hot_pivot[['Country Name', 'Country Code'] + sorted([col for col in one_hot_pivot.columns if isinstance(col, int)])]
+        df_list.append(one_hot_pivot)
     return df_list
 
-import pandas as pd
+
 def extract_UNDP():
   df_list=[]
   df_list.append(extract_UNDP_file('data/high_education_male.xlsx'))
