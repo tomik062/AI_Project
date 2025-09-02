@@ -324,8 +324,11 @@ def extract_Worldpopulationreview():
      ('data/average-workweek-by-country-2025.csv','AvgWorkWeek_AvgWeeklyHoursWorkedFemalesViaILOSTAT_hrs_Est2025'))
     df_list.append(extract_Worldpopulationreview_file
      ('data/abortion-rates-by-country-2025.csv','AbortionRatesRatePer1000Women2024'))
-    df_list.append(extract_Worldpopulationreview_file
-     ('data/social-media-users-by-country-2025.csv','SocialMediaUsers_PctOfPop'))
+    df_social_media = extract_Worldpopulationreview_file('data/social-media-users-by-country-2025.csv','SocialMediaUsers_PctOfPop')
+    df_social_media.loc[df_social_media['Country Name'] == 'Saudi Arabia', 2023] = 79.3
+    df_social_media.loc[df_social_media['Country Name'] == 'Luxembourg', 2023] = 62.1
+    df_social_media.loc[df_social_media['Country Name'] == 'Montenegro', 2023] = 75.4
+    df_list.append(df_social_media)
 
     return df_list
 
