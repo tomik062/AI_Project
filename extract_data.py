@@ -43,6 +43,7 @@ def extract_WorldBank():
     df_list.append(extract_WorldBank_file('data/healthcare-expenditure-per-capita-ppp.csv'))
     df_list.append(extract_WorldBank_file('data/physicians-per-capita.csv'))
     df_list.append(extract_WorldBank_file('data/GNI_PPP_const_2021_dollars.csv'))
+    df_list.append(extract_WorldBank_file('data/female-labor-participation.csv'))
     return df_list
 
 def extract_WorldBank_file(file):
@@ -64,7 +65,6 @@ def extract_OurWorldInData():
     df_list.append(extract_OurWorldInData_file('data/urban-population-share.csv'))
     df_list.append(extract_OurWorldInData_file('data/period-average-age-of-mothers.csv'))
     df_list.append(extract_OurWorldInData_file('data/happiness-cantril-ladder.csv'))
-    df_list.append(extract_OurWorldInData_file('data/female-labor-force-participation-rates-slopes.csv'))
     return df_list
 def extract_OurWorldInData_file(file_name):
     df = pd.read_csv(file_name, delimiter=',', engine='python')
