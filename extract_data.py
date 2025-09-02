@@ -43,7 +43,25 @@ def extract_WorldBank():
     df_list.append(extract_WorldBank_file('data/healthcare-expenditure-per-capita-ppp.csv'))
     df_list.append(extract_WorldBank_file('data/physicians-per-capita.csv'))
     df_list.append(extract_WorldBank_file('data/GNI_PPP_const_2021_dollars.csv'))
-    df_list.append(extract_WorldBank_file('data/female-labor-participation.csv'))
+    df_female_labor_wb = extract_WorldBank_file('data/female-labor-participation.csv')
+
+    # Merge with female labor force participation from Our World in Data
+    df_female_labor_owid = extract_OurWorldInData_file('data/female-labor-force-participation-rates-slopes.csv')
+    if df_female_labor_wb is not None and df_female_labor_owid is not None:
+        df_female_labor_wb = df_female_labor_wb.set_index('Country Name')
+        df_female_labor_owid = df_female_labor_owid.set_index('Country Name')
+        for index, row in df_female_labor_owid.iterrows():
+            if index in df_female_labor_wb.index:
+                for col in row.index:
+                    # Check if the column exists in both dataframes before attempting to update
+                    if col in df_female_labor_wb.columns and pd.isna(df_female_labor_wb.loc[index, col]):
+                        df_female_labor_wb.loc[index, col] = row[col]
+            else:
+                # If a country exists in OWID but not WB, add it
+                df_female_labor_wb.loc[index] = row
+
+        df_female_labor_wb = df_female_labor_wb.reset_index()
+        df_list.append(df_female_labor_wb)
     return df_list
 
 def extract_WorldBank_file(file):
