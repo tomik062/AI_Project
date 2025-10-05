@@ -396,7 +396,7 @@ def handle_partial_pay(country_name):
     case 'Greece':
       return 17+26*(0.75**2)
     case 'Ireland':
-      return 26* ((289/750.86)**2)
+      return 26* ((289/623.22)**2)
     case 'Canada':
       return 12*(0.55**2)
     case 'Romania':
